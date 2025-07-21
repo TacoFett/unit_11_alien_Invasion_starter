@@ -9,15 +9,15 @@ from pygame.sprite import Sprite
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from alien_invasion import AlienInvasion
+    from alien_fleet import AlienFleet
 
 class Alien(Sprite):
-    def __init__(self, game: 'AlienInvasion', x: float, y: float):
+    def __init__(self, fleet: 'AlienFleet', x: float, y: float):
         super().__init__()
 
-        self.screen = game.screen
-        self.boundaries = game.screen.get_rect()
-        self.settings = game.settings
+        self.screen = fleet.game.screen
+        self.boundaries = fleet.game.screen.get_rect()
+        self.settings = fleet.settings
 
 
         self.image = pygame.image.load(self.settings.alien_file)
@@ -46,3 +46,5 @@ class Alien(Sprite):
 
     def draw_alien(self):
         self.screen.blit(self.image, self.rect)
+
+    
