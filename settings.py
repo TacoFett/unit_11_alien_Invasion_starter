@@ -18,8 +18,8 @@ class Settings:
         self.ship_file = Path.cwd() / 'Assets' / 'images' / 'new ship.png'
         self.ship_w = 40
         self.ship_h = 60
-
         self.ship_speed = 5
+        self.starting_ship_count = 3
 
         self.bullet_file = Path.cwd() / 'Assets' / 'images' / 'new beam.png'
         self.laser_sound = Path.cwd() / 'Assets' / 'sound' / 'new laser.mp3'
@@ -34,7 +34,7 @@ class Settings:
         self.alien_h = 40
         self.fleet_speed = 3
         self.fleet_direction = 1
-        self.fleet_drop_speed = 6.5
+        self.fleet_drop_speed = 25
         
 
 
