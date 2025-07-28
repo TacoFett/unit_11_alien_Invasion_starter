@@ -1,3 +1,9 @@
+"""Python
+Nathaniel Lehman
+The Unit 11 Alien Invasion
+7/14/2025
+"""
+
 import pygame
 from pygame.sprite import Sprite
 from typing import TYPE_CHECKING

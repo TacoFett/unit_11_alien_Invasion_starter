@@ -1,3 +1,10 @@
+"""Python
+Nathaniel Lehman
+The Unit 11 Alien Invasion
+7/14/2025
+"""
+
+
 import pygame
 from bullet import Bullet
 from typing import TYPE_CHECKING
