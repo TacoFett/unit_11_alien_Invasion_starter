@@ -35,7 +35,7 @@ class HUD:
             self.settings.text_color, None)
         self.score_rect = self.score_image.get_rect()
         self.score_rect.right = self.boundaries.right - self.padding
-        self.score_rect.top = self.max_score_rect.bottom + self.padding
+        self.score_rect.bottom = self.boundaries.bottom - self.padding
         
     def _update_max_score(self):
         max_score_str = f'Max-Score: {self.game_stats.max_score: ,.0f}'
@@ -58,11 +58,11 @@ class HUD:
             self.settings.text_color, None)
         self.level_rect = self.level_image.get_rect()
         self.level_rect.left = self.padding
-        self.level_rect.top = self.life_rect.bottom + self.padding
+        self.level_rect.top = self.padding
 
     def _draw_lives(self):
         current_x = self.padding
-        current_y = self.padding
+        current_y = self.boundaries.bottom - self.life_rect.height - self.padding
         for _ in range(self.game_stats.ships_left):
             self.screen.blit(self.life_image, (current_x, current_y))
             current_x += self.level_rect.width + self.padding
